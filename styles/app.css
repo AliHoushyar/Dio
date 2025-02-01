@@ -1,0 +1,270 @@
+:root {
+  --background-color: #f4f5f1;
+  --hover-color: rgb(33, 144, 164);
+}
+
+@font-face {
+  font-family: "kugile";
+  src: url("../fonts/Kugile_Demo.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "fanavari";
+  src: url("../fonts/Shabnam-FD.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,ol {
+  list-style-type: none;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "fanavari", sans-serif;
+  background-color: #f4f5f1;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background: var(--background-color);
+  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+  position: absolute;
+  top: 0px;
+  z-index: 99;
+  width: 100%;
+}
+
+.logo{
+  margin-top: 10px;
+}
+
+.logo a {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1b7e91;
+  text-transform: uppercase;
+  font-family: "kugile", sans-serif;
+}
+
+.main_menu > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 -2px;
+}
+.main_menu ul li {
+  position: relative;
+}
+
+.main_menu ul li a {
+  font-size: 16px;
+  color: #353535;
+  padding: 20px 25px;
+  display: block;
+  font-weight: 400;
+}
+
+.main_menu ul li .active, .main_menu ul li:hover > a {
+  color: var(--hover-color);
+}
+
+.main_menu ul li ul {
+  width: 200px;
+  background: #fff;
+  transition: 0.5s;
+  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+}
+
+.main_menu ul li ul li a {
+  padding: 10px 25px;
+  font-size: 15px;
+}
+.main_menu ul li ul li a i {
+  float: left;
+}
+
+.main_menu ul li ul li ul {
+  right: 100%;
+  top: 0;
+}
+
+/* mega menu css */
+.mega_menu_dropdown {
+  position: static !important;
+}
+.mega_menu {
+  right: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.5s;
+  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+}
+.mega_menu_item {
+  width: 25%;
+  padding: 30px 20px;
+}
+.main_menu ul li .mega_menu_item a {
+  padding: 10px 0;
+}
+
+.main_menu ul li .mega_menu_item a:hover {
+  color: var(--hover-color);
+}
+.mega_menu_item h3 {
+  margin-bottom: 15px;
+}
+.mega_menu_item img {
+  width: 100%;
+}
+
+/* demo_2 css */
+.mega_menu_demo_2 .mega_menu {
+  right: 50%;
+  transform: translateX(50%);
+  width: 1140px;
+}
+
+.mobile_btn {
+  display: none;
+}
+
+/* responsive css */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 960px;
+  }
+  .mega_menu_demo_2 .mega_menu {
+    width: 940px;
+  }
+  .main_menu ul li ul {
+    width: 150px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 720px;
+  }
+  .mega_menu_demo_2 .mega_menu {
+    width: 700px;
+  }
+  .main_menu ul li a {
+    font-size: 15px;
+    padding: 20px 16px;
+  }
+  .main_menu ul li ul {
+    width: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .main_menu ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 50px;
+  }
+  .main_menu ul li .mega_menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 50px;
+  }
+  .main_menu ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px;
+    z-index: 99;
+  }
+  .main_menu ul li:hover > .mega_menu {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    z-index: 99;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mega_menu_demo_2 .mega_menu,
+  .container {
+    width: 100%;
+  }
+
+  nav {
+    padding: 15px;
+  }
+  .mobile_btn {
+    cursor: pointer;
+    display: block;
+  }
+
+  .main_menu {
+    display: none;
+    width: 100%;
+  }
+
+  .main_menu ul li {
+    display: block;
+  }
+  .main_menu ul li a i {
+    float: left;
+  }
+  .main_menu ul li a {
+    border-bottom: 1px solid #ddd;
+  }
+  .main_menu ul li ul {
+    width: 100%;
+  }
+  .main_menu ul li ul li ul {
+    right: 0;
+    top: auto;
+  }
+
+  .mega_menu .mega_menu_item {
+    width: 50%;
+  }
+  .main_menu ul li ul {
+    display: none;
+    transition: none;
+  }
+  .main_menu ul li .mega_menu {
+    display: none;
+    transition: none;
+  }
+
+  .mega_menu_demo_2 .mega_menu {
+    transform: translateX(0);
+  }
+  }
+
+  @media (max-width: 575.98px) {
+  .mega_menu .mega_menu_item {
+    width: 100%;
+  }
+}
+
+.salam{
+  width: 100%;
+  height: 100vh;
+}
