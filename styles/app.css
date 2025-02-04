@@ -1,6 +1,6 @@
 :root {
-  --background-color: #f4f5f1;
-  --hover-color: rgb(33, 144, 164);
+  --background-color: #faf7ef;
+  --hover-color: #fd6f21;
 }
 
 @font-face {
@@ -31,7 +31,7 @@ ul,ol {
 body {
   overflow-x: hidden;
   font-family: "fanavari", sans-serif;
-  background-color: #f4f5f1;
+  background-color: #faf7ef;
 }
 
 .container {
@@ -48,7 +48,7 @@ body {
 
 nav {
   background: var(--background-color);
-  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+  /* box-shadow: 0px 5px 15px 0px #fd6f21; */
   position: absolute;
   top: 0px;
   z-index: 99;
@@ -62,7 +62,7 @@ nav {
 .logo a {
   font-size: 40px;
   font-weight: 700;
-  color: #1b7e91;
+  color: #1c1814;
   text-transform: uppercase;
   font-family: "kugile", sans-serif;
 }
@@ -78,7 +78,7 @@ nav {
 
 .main_menu ul li a {
   font-size: 16px;
-  color: #353535;
+  color: #1c1814;
   padding: 20px 25px;
   display: block;
   font-weight: 400;
@@ -92,7 +92,7 @@ nav {
   width: 200px;
   background: #fff;
   transition: 0.5s;
-  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+  box-shadow: 0px 5px 15px 0px #e3ded7;
 }
 
 .main_menu ul li ul li a {
@@ -119,7 +119,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   transition: 0.5s;
-  box-shadow: 0px 5px 15px 0px rgba(17, 78, 90, 0.75);
+  box-shadow: 0px 5px 15px 0px #e3ded7;
 }
 .mega_menu_item {
   width: 25%;
@@ -262,9 +262,4 @@ nav {
   .mega_menu .mega_menu_item {
     width: 100%;
   }
-}
-
-.salam{
-  width: 100%;
-  height: 100vh;
 }
